@@ -71,6 +71,11 @@ export default function Post() {
           )}
         </div>
         <div className="w-full mb-6">
+          <div className="flex justify-end items-center">
+            <p className="font-mono mb-5 text-xl bg-black text-white px-4 py-1 rounded-xl">
+              {post?.author}
+            </p>
+          </div>
           <h1 className="text-2xl font-bold">{post.title}</h1>
         </div>
         <div className="browser-css">{parse(post.content)}</div>

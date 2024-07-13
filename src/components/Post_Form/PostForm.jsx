@@ -6,9 +6,13 @@ import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 export default function PostForm({ post }) {
+  const currentUser = useSelector((state) => state.auth.userData);
+  // console.log("currentUser", currentUser.name);
+
   const { register, handleSubmit, watch, setValue, control, getValues } =
     useForm({
       defaultValues: {
+        author: currentUser?.name,
         title: post?.title || "",
         slug: post?.$id || "",
         content: post?.content || "",

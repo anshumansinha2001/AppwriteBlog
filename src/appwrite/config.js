@@ -15,19 +15,21 @@ export class Service {
   }
 
   // Method to create a post
-  async createPost({ title, slug, content, featuredImage, status, userId }) {
+  async createPost({
+    author,
+    title,
+    slug,
+    content,
+    featuredImage,
+    status,
+    userId,
+  }) {
     try {
       return await this.databases.createDocument(
         conf.appwriteDatabaseId,
         conf.appwriteCollectionId,
         slug,
-        {
-          title,
-          content,
-          featuredImage,
-          status,
-          userId,
-        }
+        { author, title, content, featuredImage, status, userId }
       );
     } catch (error) {
       console.error("Appwrite service :: createPost :: error", error);
@@ -35,13 +37,14 @@ export class Service {
   }
 
   // Method to update a post
-  async updatePost(slug, { title, content, featuredImage, status }) {
+  async updatePost(slug, { author, title, content, featuredImage, status }) {
     try {
       return await this.databases.updateDocument(
         conf.appwriteDatabaseId,
         conf.appwriteCollectionId,
         slug,
         {
+          author,
           title,
           content,
           featuredImage,
