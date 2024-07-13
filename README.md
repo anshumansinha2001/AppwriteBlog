@@ -2,6 +2,16 @@
 
 This is a blog website where users can log in, create, edit, and delete their blogs. Users can also view blogs created by others. The project leverages several modern technologies to provide a seamless and efficient user experience.
 
+<div style="display: flex; justify-content: center;">
+    <img src="screenshots/blog1.png" alt="Image 1" width="400" height="200" style="margin-right: 10px;">
+    <img src="screenshots/blog3.png" alt="Image 2" width="400" height="200">
+</div>
+
+<div style="display: flex; justify-content: center; margin-top: 20px;">
+    <img src="screenshots/blog5.png" alt="Image 3" width="400" height="200" style="margin-right: 10px;">
+    <img src="screenshots/blog4.png" alt="Image 4" width="400" height="200">
+</div>
+
 ## Technologies
 
 - **Appwrite**: Used as Backend as a Service (BaaS).
